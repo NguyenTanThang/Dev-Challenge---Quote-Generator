@@ -1,38 +1,158 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul, ol {
+  list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Navbar*/
+.navbar {
+  width: 100%;
+  text-align: right;
+  padding: 20px;
+}
+
+.random-link {
+  margin-left: auto;
+  display: inline-block;
+}
+
+.random-link a {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.random-link a p {
+  margin-right: 5px;
+  color: #000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.random-link a span {
+  color: #000;
+}
+
+/*Home*/
+#home-page {
+  min-height: 100vh;
+}
+
+#home-page .home-container {
+  padding-top: 100px;
+}
+
+#home-page .author-item {
+  margin-top: 50px;
+}
+
+/*Quote Item*/
+.quote-item {
+  max-width: 614px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.quote-item p {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.quote-item::before {
+  content: "";
+  top: 0;
+  left: -100px;
+  width: 8px;
+  height: 100%;
+  background: #F7DF94;
+  position: absolute;
+}
+
+/*Author Item*/
+.author-item {
+  max-width: 672px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.author-item:hover {
+  background: #333333;
+}
+
+.author-item:hover .author-item__icon span {
+  color: #F2F2F2;
+}
+
+.author-item:hover .author-item__details h4 {
+  color: #F2F2F2;
+}
+
+.author-item__details h4 {
+  color: #4F4F4F;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.author-item__details p {
+  color: #828282;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.author-item__icon span {
+  color: transparent;
+  transition: all 0.3s ease;
+}
+
+/*Author Details*/
+.quote-list {
+  margin-top: 100px;
+}
+
+.quote-list > .quote-item {
+  margin-bottom: 80px;
+}
+
+.author-details-container h2 {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .quote-item::before {
+    left: -30px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .quote-item::before {
+    left: 7px;
+  }
+
+  .quote-item {
+    padding-left: 30px;
   }
 }
